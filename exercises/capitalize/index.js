@@ -19,12 +19,12 @@
 function capitalize(str) {
     let final = "";
     let array = str.split("");
-    for(element of array) {
-        if(element === array[0] || array[element-1] === " ") {
-            element = element.toUpperCase()
-            final = final + element 
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] === array[0] || array[i-1] === " ") {
+            array[i] = array[i].toUpperCase()
+            final = final + array[i]
         } else {
-            final = final + element
+            final = final + array[i]
         }
     }
     return final
