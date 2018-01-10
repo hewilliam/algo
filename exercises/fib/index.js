@@ -9,31 +9,29 @@
 //   fib(4) === 3
 //   fib(2) === 1
 
-function fib(n) {
-    let array = [0, 1]
-    let index = 2;
+// function fib(n) {
+//     let array = [0, 1]
+//     let index = 2;
 
-    if(n === 0) {
-        return 0
-    } 
-    if(n === 1 ) {
-        return 1
-    }
-
-    while(n >= index) {
-        array.push(array[index-1] + array[index-2])
-        index++
-    }
+//     while(n >= index) {
+//         array.push(array[index-1] + array[index-2])
+//         index++
+//     }
     
+//     return array[n]
+// }
+
+function fib(n) {
+    let array = [0,1]
+
+    for(i = 2; i <= n; i++) {
+        let a = array[i-1]
+        let b = array[i-2]
+        array.push(a+b)
+    }
     return array[n]
-
-    // if(n === index) {
-    //     console.log('ran')
-    //     return array[index]
-    // } 
-
 }
 
-console.log(fib(6))
+console.log(fib(3))
 
 module.exports = fib;
