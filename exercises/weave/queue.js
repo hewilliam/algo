@@ -16,6 +16,8 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+
+  //make sure the que is always first in, first out
 }
 
 module.exports = Queue;
