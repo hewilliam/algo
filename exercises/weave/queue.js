@@ -17,6 +17,10 @@ class Queue {
     return this.data.pop();
   }
 
+  peek() {
+    return this.data[this.data.length-1]
+  }
+
   //make sure the que is always first in, first out
 }
 
